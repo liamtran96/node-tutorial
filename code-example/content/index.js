@@ -1,10 +1,26 @@
 const http = require("http");
 
-const server = http.createServer((req, res) => {
-	if (req.url === "/") res.write("welcome to my home page");
-	if (req.url === "/about") res.end("Here is our short history");
-});
 
 const port = 5000;
 
-server.listen(port);
+console.log(path.sep);
+
+const filePath = path.join("/content/", "subfolder", "test.txt");
+
+console.log(filePath);
+
+const base = path.basename(filePath);
+console.log(base);
+
+const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
+
+console.log(absolute);
+
+const http = require("http"); 
+
+const server = http.createServer((req, res) => {
+    res.write("welcome to server")
+    res.end()
+})
+
+server.listen(5000)
