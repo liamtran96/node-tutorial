@@ -20,3 +20,12 @@ console.log(base);
 const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
 
 console.log(absolute);
+
+const http = require("http"); 
+const { resolveSoa } = require("dns");
+const server = http.createServer((req, res) => {
+    res.write("welcome to server")
+    res.end()
+})
+
+server.listen(5000)
