@@ -1,7 +1,12 @@
-const http = require("http");
+// GLOBAL  - NO WINDOW
 
+// __dirname - path to current directory
+// __filename - filename
+// required - function to use modules (Common JS)
+// module - info about current module (file)
+// process - info about env where the program is being excuted
 
-const port = 5000;
+const path = require("path");
 
 console.log(path.sep);
 
@@ -15,12 +20,3 @@ console.log(base);
 const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
 
 console.log(absolute);
-
-const http = require("http"); 
-
-const server = http.createServer((req, res) => {
-    res.write("welcome to server")
-    res.end()
-})
-
-server.listen(5000)
